@@ -55,6 +55,16 @@ var profile = {
 	// defer loading large sections of code until they are actually required while still allowing multiple modules to
 	// be compiled into a single file.
 	layers: {
+        "layer/problem" : {
+                 include: [
+                   "dojo/date/locale",
+                   "dojo/io/iframe",
+                   "dojo/NodeList-fx",
+                   "dojo/NodeList-traverse",
+                   "dijit/Dialog",
+                   "app/Dialog"
+                 ]
+        },
 		// This is the main loader module. It is a little special because it is treated like an AMD module even though
 		// it is actually just plain JavaScript. There is some extra magic in the build system specifically for this
 		// module ID.
